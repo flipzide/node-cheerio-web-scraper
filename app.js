@@ -34,7 +34,7 @@ app.post('/scrape', function(req, res){
             //set a reference to the document that came back
             $ = cheerio.load(responseHtml),
             //create a reference to the meta elements
-            $title = $('head title').text(),
+            $title = $('title').text(),
             $desc = $('meta[name="description"]').attr('content'),
             $kwd = $('meta[name="keywords"]').attr('content'),
             $ogTitle = $('meta[property="og:title"]').attr('content'),
@@ -70,7 +70,7 @@ app.post('/scrape', function(req, res){
             resObj.images = [];
 
             for (var i = 0; i < $images.length; i++) {
-                resObj.images.push($($images[i]).attr('src'));
+                resObj.images.push($($images[i]).attr('alt'));
             }
         }
 
