@@ -3,7 +3,7 @@
 
 # node-cheerio-web-page-scraper
 
-## Provides metadata and image info for any web page as JSON 
+## Provides metadata and image info for any web page as JSON
 
 ## Dependencies
 
@@ -18,7 +18,7 @@ What you need to run this app:
 * Clone this repo:
 
 ```
-git clone https://github.com/kevinchisholm/node-cheerio-web-page-scraper.git
+git clone https://github.com/flipzide/node-cheerio-web-scraper.git
 ```
 
 * Run this command:
