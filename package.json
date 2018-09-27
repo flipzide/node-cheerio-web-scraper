@@ -1,5 +1,5 @@
 {
-  "name": "node-cheerio-web-page-scraper",
+  "name": "node-cheerio-web-scraper",
   "version": "0.0.1",
   "description": "Provides metadata and image info for any web page as JSON",
   "main": "app.js",
