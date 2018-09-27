@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //tell express that we want to use the www folder for our static assets
 app.use(express.static(path.join(__dirname, 'www')));
 
-app.post('/scrape', function(req, res){
+app.post('/', function(req, res){
     res.setHeader('Content-Type', 'application/json');
 
     //make a new request to the URL provided in the HTTP POST request

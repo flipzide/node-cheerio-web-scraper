@@ -8,7 +8,7 @@
 
     //initialize the applcation
     utils.init = function(){
-        
+
         $(document).ready(function () {
             utils.start();
         });
@@ -46,7 +46,7 @@
             $('#ajax-loader-container').show();
 
             $.ajax({
-                url:  '/scrape',
+                url:  '/',
                 type: 'POST',
                 data: {url:  $('#urlText').val() },
                 success (jsonData) {
