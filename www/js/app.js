@@ -46,7 +46,7 @@
             $('#ajax-loader-container').show();
 
             $.ajax({
-                url:  '/',
+                url:  '/scrape',
                 type: 'POST',
                 data: {url:  $('#urlText').val() },
                 success (jsonData) {

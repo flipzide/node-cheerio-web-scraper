@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //tell express that we want to use the www folder for our static assets
 app.use(express.static(path.join(__dirname, 'www')));
 
-app.post('/', function(req, res){
+app.post('/scrape', function(req, res){
     res.setHeader('Content-Type', 'application/json');
 
     //make a new request to the URL provided in the HTTP POST request
@@ -40,11 +40,11 @@ app.post('/', function(req, res){
             $ogTitle = $('meta[property="og:title"]').attr('content'),
             $ogImage = $('meta[property="og:image"]').attr('content'),
             $ogkeywords = $('meta[property="og:keywords"]').attr('content'),
-            $images = $('img');
+            $images = $('a');
 
-        if ($title) {
-            resObj.title = $title;
-        }
+        // if ($title) {
+        //     resObj.title = $title;
+        // }
 
         if ($desc) {
             resObj.description = $desc;
@@ -70,7 +70,7 @@ app.post('/', function(req, res){
             resObj.images = [];
 
             for (var i = 0; i < $images.length; i++) {
-                resObj.images.push($($images[i]).attr('alt'));
+                resObj.images.push($($images[i]).attr('title'));
             }
         }
 
